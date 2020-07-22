@@ -66,7 +66,6 @@ class Swipebox_Plugin implements Typecho_Plugin_Interface
      */
 	public static function btn_parse($content,$widget,$lastResult)
 	{
-		$content = preg_replace("/<img src=\"([^\"]*)\" alt=\"([^\"]*)\" title=\"([^\"]*)\">/i", "<a class=\"swipebox\" href=\"\\1\" title=\"\\3\"><img src=\"\\1\" alt=\"\\2\" title=\"\\3\"></a>", $content);
 		return $content;
 	}
 	/**
@@ -89,13 +88,7 @@ class Swipebox_Plugin implements Typecho_Plugin_Interface
 	 */
     public static function footer(){
 	    echo '<script src="' . Helper::options()->pluginUrl . '/Swipebox/js/jquery.swipebox.min.js"></script>';
-        echo "<script type=\"text/javascript\">
-;( function( $ ) {
-
-	$( '.swipebox' ).swipebox();
-
-} )( jQuery );
-</script>";
+        echo '<script src="' . Helper::options()->pluginUrl . '/Swipebox/js/modify_img_tag.js"></script>';
 	}
 
 }

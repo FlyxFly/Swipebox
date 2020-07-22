@@ -1,4 +1,4 @@
 # Swipebox
 typecho Swipebox灯箱插件
 
-发布地址：https://jioban.com/typecho-plugin/swipebox.html
+改为使用JS来调整HTML代码结构。
